@@ -1,35 +1,22 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/PartialsComponent/Header";
-import Footer from "./components/PartialsComponent/Footer";
-import Home from "./pages/main/Home";
-import AddTask from "./pages/main/AddTask";
-import Sidebar from "./components/PartialsComponent/Sidebar";
-import Js from "./components/PartialsComponent/Js";
-import Register from "./pages/auth/Register";
-import Login from "./pages/auth/Login";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import ForgotPassword from "./pages/Auth/ForgotPassword";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Fragment } from "react";
+import ResetPassword from "./pages/Auth/ResetPassword";
 
 function App() {
   return (
-    <Router>
-      {/* <div>
-        <Login />
-      </div> */}
-      <div class="nav-fixed">
-        <Header />
-        <div id="layoutSidenav">
-          <Sidebar />
-          <div id="layoutSidenav_content">
-            <Switch>
-              <Route exact path="/home" component={Home} />
-              <Route path="/addTask" component={AddTask} />
-            </Switch>
-            <Footer />
-          </div>
-        </div>
-        <Js />
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Fragment>
+        <Route path="/" exact component={ Login } />
+        <Route path="/login" component={ Login } />
+        <Route path="/register" component={ Register } />
+        <Route path="/forgotpass" component={ ForgotPassword } />
+        <Route path="/resetpass" component={ ResetPassword } />
+      </Fragment>
+    </BrowserRouter>
   );
 }
 
