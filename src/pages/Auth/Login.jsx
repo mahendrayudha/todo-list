@@ -40,7 +40,10 @@ class Login extends React.Component {
                                                     </div>
                                                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                         <div class="btn_a">
-                                                            <Button to="/" btn_name="Login" btn_class="btn btn-primary" />
+                                                            <Button to="/home" btn_name="Login" btn_class="btn btn-primary" />
+                                                        </div>
+                                                        <div class="btn_a">
+                                                            <Button to="/dashboard" btn_name="Admin" btn_class="btn btn-secondary" />
                                                         </div>
                                                         <Link class="small" to="/forgotpass">Forgot Password?</Link>
                                                     </div>
